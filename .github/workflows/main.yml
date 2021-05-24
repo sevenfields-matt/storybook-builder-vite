@@ -4,8 +4,7 @@ on: [workflow_dispatch]
 
 defaults:
   run:
-    shell: bash
-    working-directory: scripts
+    working-directory: packages/storybook-builder-vite
 
 jobs:
   build:
@@ -29,6 +28,12 @@ jobs:
         registry-url: https://npm.pkg.github.com
         scope: '@seven-fields-software-ltd'
       env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: npm install, build, and test
+      run: |
+        pwd
+      env:
+        CI: true
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: npm install, build, and test
       run: |
