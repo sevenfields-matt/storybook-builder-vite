@@ -1,5 +1,5 @@
 {
-    "name": "@seven-fields-software-ltd/storybook-builder-vite",
+    "name": "@sevenfields-matt/storybook-builder-vite",
     "version": "0.0.7",
     "description": "An experimental plugin to run and build Storybooks with Vite",
     "main": "index.js",
